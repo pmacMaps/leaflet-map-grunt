@@ -1,0 +1,1 @@
+var mapService = L.esri.dynamicMapLayer({});
