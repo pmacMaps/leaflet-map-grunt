@@ -18,6 +18,17 @@ module.exports = function(grunt){
 				dest: 'components/js/combined/app.js'
 			}
 		},
+		htmlmin: {                                     
+			dist: {                                     
+			  options: {                                 
+				removeComments: true,
+				collapseWhitespace: true
+			  },
+			  files: {                                   
+				'build/index.html': 'components/html/combined/index.html'
+				}
+			}
+		},
 		cssmin: {
 		  target: {
 			files: [{
@@ -44,8 +55,9 @@ module.exports = function(grunt){
 	});
     // load tasks
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify-es');
     // register tasks
-	grunt.registerTask('default', ['concat', 'cssmin', 'uglify']);
+	grunt.registerTask('default', ['concat', 'htmlmin', 'cssmin', 'uglify']);
 };
