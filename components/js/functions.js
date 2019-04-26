@@ -1,3 +1,5 @@
+'use strict';
+
 // Make collapsed navigation scroll
 function mobileNavScroll() {
     $(".navbar-collapse").css({maxHeight: $(window).height() - $(".navbar-header").height() + "px"});

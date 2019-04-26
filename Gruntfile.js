@@ -17,10 +17,22 @@ module.exports = function(grunt){
 				src: ['components/js/functions.js', 'components/js/map-functions.js', 'components/js/date-picker.js', 'components/js/map.js',  'components/js/layers.js', 'components/js/filter.js', 'components/js/search.js', 'components/js/geolocate.js','components/js/loading-screen.js'],
 				dest: 'components/js/combined/app.js'
 			}
-		}	  	
+		},
+		cssmin: {
+		  target: {
+			files: [{
+			  expand: true,
+			  cwd: 'components/css/combined',
+			  src: ['*.css'],
+			  dest: 'build/css',
+			  ext: '.min.css'
+			}]
+		  }
+	    }
 	});
     // load tasks
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
     // register tasks
-	grunt.registerTask('default', ['concat']);
+	grunt.registerTask('default', ['concat', 'cssmin']);
 };
