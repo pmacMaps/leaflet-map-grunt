@@ -28,11 +28,24 @@ module.exports = function(grunt){
 			  ext: '.min.css'
 			}]
 		  }
-	    }
+	    },
+		uglify: {
+			options: {
+				mangle: false,
+				sourceMap: true,
+        		sourceMapName: 'build/js/app.map'
+			},
+			my_target: {
+			  files: {
+				'build/js/app.min.js' : ['components/js/combined/app.js']
+			  }
+			}
+  		}
 	});
     // load tasks
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-uglify-es');
     // register tasks
-	grunt.registerTask('default', ['concat', 'cssmin']);
+	grunt.registerTask('default', ['concat', 'cssmin', 'uglify']);
 };

@@ -42,7 +42,7 @@ const planSubmissions = L.esri.featureLayer({
 });
 
 // format popup for plan review featres
-const planSubmissions.bindPopup(function(evt, layer) {    
+planSubmissions.bindPopup(function(evt, layer) {    
     // reformat date field value
     var jsonDate = evt.feature.properties.DATE;
     var formattedDate = convertJSONDateToString(jsonDate);

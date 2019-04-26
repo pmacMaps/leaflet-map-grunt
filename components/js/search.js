@@ -1,7 +1,3 @@
-const addressSearchControl,
-    ccpaProvider,
-    featureLayerProvider;
-    
 // CCPA Composite Locatoer
 const ccpaProvider = L.esri.Geocoding.geocodeServiceProvider({
     label: 'Street Addresses',

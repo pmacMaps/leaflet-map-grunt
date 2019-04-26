@@ -303,7 +303,7 @@ const planSubmissions = L.esri.featureLayer({
 });
 
 // format popup for plan review featres
-const planSubmissions.bindPopup(function(evt, layer) {    
+planSubmissions.bindPopup(function(evt, layer) {    
     // reformat date field value
     var jsonDate = evt.feature.properties.DATE;
     var formattedDate = convertJSONDateToString(jsonDate);
@@ -370,11 +370,7 @@ function setFilter() {
 
 // add event listeners
 $('#setFilter').click(setFilter);
-$('#clearFilter').click(clearFilter);const addressSearchControl,
-    ccpaProvider,
-    featureLayerProvider;
-    
-// CCPA Composite Locatoer
+$('#clearFilter').click(clearFilter);// CCPA Composite Locatoer
 const ccpaProvider = L.esri.Geocoding.geocodeServiceProvider({
     label: 'Street Addresses',
     maxResults: 8,
