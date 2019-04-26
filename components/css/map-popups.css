@@ -1,0 +1,25 @@
+/*** Layer Popups ***/
+div.leaflet-popup-content {
+    font-size: 1.15em;
+    color: #000;
+}
+
+div.leaflet-popup-content h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+	text-align: center;	
+}
+
+div.leaflet-popup-content h4 {
+    font-size: 1.2em;
+}
+
+div.leaflet-popup-content ul {
+    margin-bottom: 20px;
+    padding-left: 5px;
+    list-style-type: square;
+}
+
+div.leaflet-popup-content span.gray-text {
+    color: #555;
+}

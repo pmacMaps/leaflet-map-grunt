@@ -1,0 +1,30 @@
+/*** Panels ***/
+.calcite-maps .panel {
+    min-width: 215px;
+}
+
+.calcite-maps.nav-position-top-fixed.nav-space-none .panel-container {
+    top: 90px;
+     z-index: 650;
+}
+
+.panel-title {
+    background: #196fa6;
+}
+
+.panel-title > a,
+.calcite-maps .panel-title span.glyphicon.glyphicon-remove {
+    color: #fff;
+}
+
+.calcite-maps .panel-title span.glyphicon.glyphicon-remove:hover {
+    color: #000;
+}
+
+.panel-body a {
+    text-decoration: underline;
+}
+
+#panelFilter .panel-body {
+    min-height: 375px;
+}

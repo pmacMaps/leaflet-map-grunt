@@ -1,8 +1,11 @@
-h1 {
-	font-size: 1.5em;
+/*** General Settings ***/
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-a {
-	text-decoration: underline;
-	color: blue;
+body {
+    color: #333;
 }
