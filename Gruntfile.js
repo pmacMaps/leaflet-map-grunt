@@ -51,13 +51,28 @@ module.exports = function(grunt){
 				'build/js/app.min.js' : ['components/js/combined/app.js']
 			  }
 			}
-  		}
+  		},
+		watch: {
+			html: {
+				files: 'components/html/*.html',
+				tasks: ['concat:html','htmlmin']
+			},
+			css: {
+				files: 'components/css/*.css',
+				tasks: ['concat:css','cssmin']
+			},
+			js: {
+				files: 'components/js/*.js',
+				tasks: ['concat:js','uglify']
+			}	
+		}
 	});
     // load tasks
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify-es');
     // register tasks
-	grunt.registerTask('default', ['concat', 'htmlmin', 'cssmin', 'uglify']);
+	grunt.registerTask('default', ['watch']);
 };
