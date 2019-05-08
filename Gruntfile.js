@@ -68,14 +68,22 @@ module.exports = function(grunt){
 				files: 'components/js/*.js',
 				tasks: ['concat:js','uglify']
 			}	
-		}
+		},
+		connect: {
+			server: {
+			  options: {
+				base: 'build'
+			  }
+			}
+  		}
 	});
     // load tasks
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify-es');
     // register tasks
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['connect','watch']);
 };
