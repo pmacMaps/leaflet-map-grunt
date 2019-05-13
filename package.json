@@ -1,7 +1,7 @@
 {
   "name": "leaflet-map-grunt",
-  "version": "0.1.0",
-  "description": "Test environment to build my Leaflet.js map apps with Grunt.js",
+  "version": "0.2.0",
+  "description": "Local development environment settings to build my Leaflet.js map apps with Grunt.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
