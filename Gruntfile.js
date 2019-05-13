@@ -1,7 +1,8 @@
 module.exports = function(grunt){
 	// configurations
     grunt.initConfig({
-		concat: {
+		// combine files together
+        concat: {
 			options: {
 			  separator: '',
 			},
@@ -18,17 +19,20 @@ module.exports = function(grunt){
 				dest: 'components/js/combined/app.js'
 			}
 		},
+        // minify production index.html file
 		htmlmin: {                                     
 			dist: {                                     
 			  options: {                                 
 				removeComments: true,
 				collapseWhitespace: true
 			  },
+              // ouput dir : input dir    
 			  files: {                                   
-				'build/index.html': 'components/html/combined/index.html'
+				'../build/[app-name]/index.html': 'components/html/combined/index.html'
 				}
 			}
 		},
+        // minify production css file
 		cssmin: {
             options: {
               sourceMap: true
@@ -38,23 +42,26 @@ module.exports = function(grunt){
 			  expand: true,
 			  cwd: 'components/css/combined',
 			  src: ['*.css'],
-			  dest: 'build/css',
+			  dest: '../build/[app-name]/assets/css',
 			  ext: '.min.css'
 			}]
 		  }
 	    },
+        // minify production js file
 		uglify: {
 			options: {
 				mangle: false,
 				sourceMap: true,
-        		sourceMapName: 'build/js/app.map'
+        		sourceMapName: '../build/[app-name]/assets/js/app.map'
 			},
 			my_target: {
 			  files: {
-				'build/js/app.min.js' : ['components/js/combined/app.js']
+                // ouput dir : input dir    
+				'../build/[app-name]/assets/js/app.min.js' : ['components/js/combined/app.js']
 			  }
 			}
   		},
+        // run tasks when files change
 		watch: {
 			html: {
 				files: 'components/html/*.html',
@@ -69,10 +76,11 @@ module.exports = function(grunt){
 				tasks: ['concat:js','uglify']
 			}	
 		},
+        // spin up a local server to test changes
 		connect: {
 			server: {
 			  options: {
-				base: 'build'
+				base: '../build/[app-name]'
 			  }
 			}
   		}
