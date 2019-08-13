@@ -16,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "grunt": "^1.0.4",
+    "grunt-babel": "^8.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-connect": "^2.0.0",
     "grunt-contrib-csslint": "^2.0.0",
