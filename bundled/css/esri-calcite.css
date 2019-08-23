@@ -1,0 +1,1779 @@
+/* ArcGIS 4.0 calcite-maps-layout.css */
+/* Core overrides to create map layouts */
+/* ======================================================================== */
+
+/* --- */
+/* Map */
+/* --- */
+
+.calcite-maps .map-container {
+	width: 100%;
+	height: 100%;
+}
+
+.calcite-maps .map-position-absolute {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.calcite-maps .map-position-relative {
+	position: relative;
+	width: 768px;
+	height: 400px;
+}
+
+/* ------------*/
+/* Nav Layouts */
+/* ------------*/
+
+/* Full body and map */
+.calcite-maps.nav-position-none,
+.calcite-maps.nav-position-top,
+.calcite-maps.nav-position-bottom {
+	top: 0;
+	bottom: 0;
+}
+
+/* Offset body and map */
+.calcite-maps.nav-position-top-fixed, 
+.calcite-maps.nav-position-top-fixed .map-position-absolute {
+	top: 64px;
+	bottom: 0;
+}
+
+.calcite-maps.nav-position-bottom-fixed,
+.calcite-maps.nav-position-bottom-fixed .map-position-absolute {
+	top: 0;
+	bottom: 64px;
+}
+
+/* -------------- */
+/* Navbar - Space */
+/* -------------- */
+
+/* Margin around navbar */
+.calcite-maps.nav-space-none .navbar {
+	margin: 0;
+}
+
+.calcite-maps.nav-space-top .navbar {
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+
+.calcite-maps.nav-space-bottom .navbar {
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.calcite-maps.nav-space-all .navbar {
+	margin: 15px;
+}
+
+/* ------ */
+/* Navbar */
+/* ------ */
+
+.calcite-maps .navbar {
+	border-top: none;
+	border-bottom: none;
+}
+
+.calcite-maps .navbar {
+	min-height: 64px;
+}
+
+/* Navbar - Minibar */
+.calcite-maps.is-minibar .navbar {
+	right: auto;
+	background-color: transparent !important;
+}
+
+.calcite-maps.is-minibar .navbar .container-fluid {
+	padding-right: 0;	
+}
+
+/* Navbar list */
+.calcite-maps.nav-position-none .navbar {
+	display: none !important;
+}
+
+.calcite-maps .navbar-nav {
+	margin: 0;
+}
+
+.calcite-maps .navbar-nav > li > a {
+	padding: 19px 15px 21px;
+}
+
+.calcite-maps .navbar-brand {
+	padding: 10px 12px 10px 10px;
+	font-size: 40px;
+	cursor: pointer;
+	height: 100%;
+}
+
+.calcite-maps .navbar-brand img {
+	width: 40px
+}
+
+.calcite-maps.nav-position-top.nav-space-all.is-minibar .navbar > .container-fluid .navbar-brand {
+	margin-left: -30px;
+}
+
+.calcite-maps.nav-position-bottom.nav-space-all.is-minibar .navbar > .container-fluid .navbar-brand {
+	/*margin-top: 0px;
+	margin-left: -30px;*/
+}
+
+/* Navbar - Info */
+.calcite-maps .navbar-info {
+	position: absolute;
+	left: 62px;
+	width: calc(100% - 535px); /* Lg screens */
+	line-height: 1.2;
+	cursor: pointer;
+	height: 100%;
+}
+
+.calcite-maps .navbar-title {
+	padding-top: 7px;
+	font-size: 25px;
+	/*font-weight: 400;*/
+}
+
+.calcite-maps .navbar-subtitle {
+	padding: 1px 2px 2px 2px;
+	font-size: 13px;
+}
+
+.calcite-maps .text-overflow {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/* Navbar - Toggle Button */
+.calcite-maps .navbar-toggle {
+	float: right;
+	margin: 15px;
+}
+
+/* Navbar - Collapse */
+.calcite-maps .navbar-search {
+	padding-top: 8px;
+}
+
+.calcite-maps .dropdown-toggle span {
+	font-size: 17px;
+	top: 4px
+}
+
+/* Navbar - Menu */
+.calcite-maps .navbar-nav .dropdown-menu {
+	border: none;
+	font-size: 14px;
+}
+
+.calcite-maps .dropdown-menu li a {
+	padding: 10px 15px;
+}
+
+/*.calcite-maps .dropdown-menu li:first-child {
+	margin-top: 5px;
+}
+
+.calcite-maps .dropdown-menu li:last-child {
+	margin-bottom: 5px;	
+}*/
+
+/* ----- */
+/* Panel */
+/* ----- */
+
+.calcite-maps .panel-container {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	/*left: 15px;*/
+	max-width: 350px;
+}
+
+/* Panel - Left/Right */
+.calcite-maps.panel-right .panel-container {
+	left: auto;
+	right: 15px;
+}
+
+.calcite-maps.panel-left .panel-container {
+	left: 15px;
+	right: auto;
+}
+
+/* Panel - Top */
+.calcite-maps.nav-position-top.nav-space-none .panel-container,
+.calcite-maps.nav-position-top.nav-space-bottom .panel-container,
+.calcite-maps.nav-position-top-fixed.nav-space-none .panel-container {
+	top: 80px;
+}
+
+.calcite-maps.nav-position-top.nav-space-top .panel-container, 
+.calcite-maps.nav-position-top.nav-space-all .panel-container {
+	top: 95px;
+}
+
+.calcite-maps.nav-position-top.is-minibar .panel-container {
+	top: 15px;
+	/*right: 0;*/
+}
+
+.calcite-maps.nav-position-top.nav-space-top.is-minibar .panel-container, 
+.calcite-maps.nav-position-top.nav-space-all.is-minibar .panel-container {
+	top: 15px;
+	right: 15px;
+}
+
+.calcite-maps.nav-position-top.is-minibar.panel-left .panel-container {
+	top: 80px;
+	/*right: 0;*/
+}
+
+.calcite-maps.nav-position-top.nav-space-top.panel-left.is-minibar .panel-container, 
+.calcite-maps.nav-position-top.nav-space-all.panel-left.is-minibar .panel-container {
+	top: 95px;
+	right: auto;
+}
+
+/* Panel - Bottom */
+.calcite-maps.nav-position-bottom .panel-container,
+.calcite-maps.nav-position-bottom-fixed.nav-space-none .panel-container, 
+.calcite-maps.nav-position-bottom.nav-space-top .panel-container, 
+.calcite-maps.nav-position-bottom.nav-space-bottom .panel-container
+.calcite-maps.nav-position-bottom.nav-space-all .panel-container {
+	top: 15px;
+}
+
+.calcite-maps .panel-default {
+	border-color: #E3E3E3;
+}
+
+.calcite-maps .panel-default > .panel-heading + .panel-collapse > .panel-body {
+	border-top: 0;
+}
+
+/* Panel - group */
+
+.calcite-maps .panel-group {
+	margin-bottom: 0;
+}
+
+.calcite-maps .panel {
+	position: relative;
+	min-width: 175px;
+}
+
+.calcite-maps .panel-group .panel + .panel {
+	margin-top: -1px;
+	/*margin-top: 0;*/
+}
+
+.calcite-maps .panel, 
+.calcite-maps .panel-heading {
+	border-radius: 0;
+}
+
+.calcite-maps .panel-heading {
+	padding: 0;
+	background-color: none;
+}
+
+.calcite-maps .panel-title {
+	font-size: 15px;
+	color: #595959;
+}
+
+.calcite-maps .panel-title a {
+	padding: 10px 10px;	
+}
+
+.calcite-maps .panel-title .glyphicon {
+	top: 2px;
+}
+
+.calcite-maps .panel-title span.glyphicon.glyphicon-remove {
+	color: #B5B5B5;
+}
+
+.calcite-maps .panel-title span.glyphicon.glyphicon-remove:focus, 
+.calcite-maps .panel-title span.glyphicon.glyphicon-remove:hover {
+	color: #595959;
+}
+
+.calcite-maps .panel-toggle {
+	display: inline-block;
+	width: 100%;
+	min-width: 125px;
+	text-decoration: none;
+}
+
+.calcite-maps .panel-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px;
+	margin-top: 5px
+	font-size: 15px;
+}
+
+.calcite-maps .panel-close {
+	color: #CCCCCC;	
+}
+
+.calcite-maps .panel-body-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 13px;
+	font-size: 17px;
+}
+
+.calcite-maps .panel-body-close {
+	color: #828282;	
+}
+
+.calcite-maps .panel-close:focus,
+.calcite-maps .panel-close:hover,
+.calcite-maps .panel-body-close:focus,
+.calcite-maps .panel-body-close:hover {
+	color: #595959;
+}
+
+.calcite-maps .panel-collapse {
+	/*border-top: 1px solid #efefef;*/
+}
+
+.calcite-maps .panel-body {
+	position: relative;
+	max-height: 300px;
+	min-height: 50px;
+	width: 325px;
+	padding: 15px;
+	overflow: auto;
+	font-size: 14px;
+}
+
+.calcite-maps .panel-control {
+	padding: 15px;
+}
+
+
+
+
+/* --------- */
+/* Animation */
+/* --------- */
+
+.calcite-maps .no-transition {
+	-webkit-transition: 0;
+	-o-transition: 0;
+	transition: 0;	
+}
+
+/* Panel */
+.calcite-maps .panel.collapsing {
+	-webkit-transition: height 0.01s;
+	-o-transition: height 0.01s;
+	transition: height 0.01s;
+}
+
+/* Panel body */
+.calcite-maps .panel-collapse.collapsing {
+	-webkit-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
+	-webkit-transition: height 0.25s;
+	-o-transition: height 0.25s;
+	transition: height 0.25s;
+}
+
+/* Nav collapse */
+.calcite-maps .navbar-collapse.collapsing {
+	-webkit-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
+	-webkit-transition-duration: .15s;
+	-o-transition-duration: .15s;
+	transition-duration: .15s;
+	-webkit-transition-property: height, visibility;
+	-o-transition-property: height, visibility;
+	transition-property: height, visibility;
+}
+
+.calcite-maps .fade-in, 
+.calcite-maps .fade-out {
+	-webkit-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+/* -----------------*/
+/* Hidden Overrides */
+/* -----------------*/
+
+/* Search, Map and Scene Menus */
+.calcite-maps .visible-sm.visible-md.visible-lg.hidden,
+.calcite-maps .visible-sm.hidden-md.hidden-lg.hidden,
+.calcite-maps .visible-xs.hidden {
+	display: none !important;
+}
+
+/* ------- */
+/* Carousel */
+/* ------- */
+
+.calcite-maps .carousel-inner > .item > img {
+	width: 100%;
+}
+.calcite-maps .carousel {
+	margin: 30px;
+}
+
+/* ---- */
+/* Misc */
+/* ---- */
+
+.text-center {
+	text-align: center;
+}
+
+.text-no-select {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.form-padding {
+	padding: 35px 0 0;
+}
+
+/* -------------- */
+/* Large screens */
+/* -------------- */
+
+/*@media (min-width: 1200px) {
+	.calcite-maps .navbar-info {
+		max-width: 695px;
+	}
+}*/
+
+/* -------------- */
+/* Medium screens */
+/* -------------- */
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+	.calcite-maps .navbar-info {
+		/*width: calc(100% - 500px);*/
+	}
+
+}
+
+/* -------------- */
+/* Small screens */
+/* -------------- */
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+	.calcite-maps .navbar-info {
+		width: calc(100% - 390px);
+	}
+
+}
+
+/* ------------- */
+/* XSmall screens */
+/* ------------- */
+
+@media (max-width: 767px) {
+
+	/* ------ */
+	/* Navbar */
+	/* ------ */
+
+	/* Brand and Title */
+	.calcite-maps .navbar-brand {
+		padding: 11px 12px 9px 7px;
+		font-size: 38px;
+	}
+
+	.calcite-maps .navbar-brand img {
+		width: 36px
+	}
+	
+	.calcite-maps .navbar-info {
+		left: 54px;
+		width: calc(100% - 115px);
+	}
+	
+	.calcite-maps .navbar-title {
+		font-size: 24px;
+		padding-top: 8px;
+	}
+	
+	.calcite-maps .navbar-subtitle {
+		font-size: 12px;
+		padding-top: 2px;
+		padding-left: 0;
+	}
+	
+	.calcite-maps.is-minibar .navbar .container-fluid {
+		padding-right: 15px;
+	}
+	
+	.calcite-maps.nav-position-top.nav-space-all.is-minibar .navbar > .container-fluid .navbar-brand,
+	.calcite-maps.nav-position-bottom.nav-space-all.is-minibar .navbar > .container-fluid .navbar-brand {
+		margin-left: 0; 
+	}
+	
+	/* Dropdown */
+	.calcite-maps .navbar-nav .dropdown-menu {
+		margin: 0 -15px;
+	}
+	
+	.calcite-maps .navbar-nav .open .dropdown-menu > li > a {
+		padding: 10px 20px;
+	}
+
+	.calcite-maps .dropdown-menu li:first-child {
+		margin-top: 15px;
+	}
+
+	.calcite-maps .dropdown-menu li:last-child {
+		margin-bottom: 15px;	
+	}
+
+
+	/* ------ */
+	/* Panel  */
+	/* ------ */
+
+	/* Panel - Reset */
+	.calcite-maps .panel-container,
+	.calcite-maps.panel-right .panel-container,
+	.calcite-maps.panel-left .panel-container {
+		right: 0;
+		left: 0;
+		max-width: 100%;
+	}
+	
+	.calcite-maps .panel-container .panel:first-child {
+		margin-top: -1px;
+	}
+
+	.calcite-maps .panel-group,
+	.calcite-maps .panel,
+	.calcite-maps .panel-heading,
+	.calcite-maps .panel-title,
+	.calcite-maps .panel-collapse,
+	.calcite-maps .panel-default > .panel-heading + .panel-collapse > .panel-body {
+		border: 0;
+		box-shadow: none;
+	}
+
+	.calcite-maps .panel .panel-body {
+		max-height: 270px;
+		min-width: 100%;
+	}
+
+	.calcite-maps .panel-body-control .panel-body-close {
+		margin: 27px 19px 24px;
+	}
+
+	.calcite-maps .panel-control {
+		padding: 15px 60px 15px 60px;
+	}
+
+	/* Panel - Top */
+	.calcite-maps.nav-position-top.nav-space-none .panel-container,
+	.calcite-maps.nav-position-top.nav-space-bottom .panel-container,
+	.calcite-maps.nav-position-top-fixed.nav-space-none .panel-container {
+		/*top: auto;*/
+		top: 65px;
+	}
+
+	.calcite-maps.nav-position-top.nav-space-top .panel-container,
+	.calcite-maps.nav-position-top.nav-space-all .panel-container,
+	.calcite-maps.nav-position-top.nav-space-top.is-minibar .panel-container,
+	.calcite-maps.nav-position-top.nav-space-all.is-minibar .panel-container {
+		top: 95px;
+		right: 0;
+	}
+	
+	.calcite-maps.nav-position-top.nav-space-all .panel-container {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	
+	/* Panel - Bottom */
+	.calcite-maps.nav-position-bottom .panel-container,
+	.calcite-maps.nav-position-bottom-fixed.nav-space-none .panel-container, 
+	.calcite-maps.nav-position-bottom.nav-space-top .panel-container, 
+	.calcite-maps.nav-position-bottom.nav-space-bottom .panel-container {
+		top: 0;
+	}
+	
+	.calcite-maps.nav-position-bottom.nav-space-all .panel-container {
+		top: 15px;
+		left: 15px;
+		right: 15px;
+	}
+	
+	.calcite-maps .navbar-collapse.collapse.in .dropdown-menu + .panel-container {
+		display: none;
+	}
+
+	.calcite-maps .is-transparent-xs {
+		background-color: transparent;
+	}
+
+}
+
+/* -------------- */
+/* XXSmall screens */
+/* -------------- */
+
+@media (max-width: 480px) {
+
+	.calcite-maps .navbar-collapse {
+		max-height: 260px;
+	}
+
+}/* ArcGIS 4.0 calcite-maps-style.css */
+/* Calcite colors for nav text, background and other styles */
+/* ======================================================================== */
+
+/* ----- */
+/* Fonts */
+/* ----- */
+
+/*body {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}*/
+
+/* ------ */
+/* Colors */
+/* ------ */
+
+.calcite-maps .off-white {
+	background-color: #f8f8f8;
+}
+.calcite-maps .lightest-gray {
+	background-color: #efefef;
+}
+.calcite-maps .lighter-gray {
+	background-color: #cccccc;
+}
+.calcite-maps .light-gray {
+	background-color: #a9a9a9;
+}
+.calcite-maps .light-gray-50 {
+	background-color: rgba(169, 169, 169, 0.5);
+}
+.calcite-maps .light-gray-75 {
+	background-color: rgba(169, 169, 169, 0.75);
+}
+.calcite-maps .gray {
+	background-color: #959595;
+}
+.calcite-maps .gray-50 {
+	background-color: rgba(149, 149, 149, 0.5);
+}
+.calcite-maps .gray-75 {
+	background-color: rgba(149, 149, 149, 0.75);
+}
+.calcite-maps .dark-gray {
+	background-color: #828282;
+}
+.calcite-maps .dark-gray-50 {
+	background-color: rgba(130, 130, 130, 0.5);
+}
+.calcite-maps .dark-gray-75 {
+	background-color: rgba(130, 130, 130, 0.75);
+}
+.calcite-maps .darker-gray {
+	background-color: #6e6e6e;
+}
+.calcite-maps .darkest-gray {
+	background-color: #595959;
+}
+.calcite-maps .off-black {
+	background-color: #4c4c4c;
+}
+.calcite-maps .black {
+	background-color: rgb(50, 50, 50);
+}
+.calcite-maps .trans-off-black {
+	background-color: rgba(0,0,0,0.45);
+}
+.calcite-maps .trans-black {
+	background-color: rgba(0,0,0,0.75);
+}
+.calcite-maps .light-blue {
+	background-color: #56a5d8;
+}
+.calcite-maps .light-blue-50 {
+	background-color: rgba(86, 165, 216, 0.5);
+}
+.calcite-maps .light-blue-75 {
+	background-color: rgba(86, 165, 216, 0.75);
+}
+.calcite-maps .blue {
+	background-color: #3b8fc4;
+}
+.calcite-maps .blue-50 {
+	background-color: rgba(59, 143, 196, 0.5);
+}
+.calcite-maps .blue-75 {
+	background-color: rgba(59, 143, 196, 0.75);
+}
+.calcite-maps .dark-blue {
+	background-color: #196fa6;
+}
+.calcite-maps .dark-blue-50 {
+	background-color: rgba(25, 111, 166, 0.5);
+}
+.calcite-maps .dark-blue-75 {
+	background-color: rgba(25, 111, 166, 0.75);
+}
+.calcite-maps .light-green {
+	background-color: #9bc19c;
+}
+.calcite-maps .light-green-50 {
+	background-color: rgba(155, 193, 156, 0.5);
+}
+.calcite-maps .light-green-75 {
+	background-color: rgba(155, 193, 156, 0.75);
+}
+.calcite-maps .green {
+	background-color: #5a9359;
+}
+.calcite-maps .green-50 {
+	background-color: rgba(90, 147, 89, 0.5);
+}
+.calcite-maps .green-75 {
+	background-color: rgba(90, 147, 89, 0.75);
+}
+.calcite-maps .dark-green {
+	background-color: #338033;
+}
+.calcite-maps .dark-green-50 {
+	background-color: rgba(51, 128, 51, 0.5);
+}
+.calcite-maps .dark-green-75 {
+	background-color: rgba(51, 128, 51, 0.75);
+}
+.calcite-maps .light-red {
+	background-color: #e04f1d;
+}
+.calcite-maps .light-red-50 {
+	background-color: rgba(224, 79, 29, 0.5);
+}
+.calcite-maps .light-red-75 {
+	background-color: rgba(224, 79, 29, 0.75);
+}
+.calcite-maps .red {
+	background-color: #c7461a;
+}
+.calcite-maps .red-50 {
+	background-color: rgba(199, 70, 26, 0.5);
+}
+.calcite-maps .red-75 {
+	background-color: rgba(199, 70, 26, 0.75);
+}
+.calcite-maps .dark-red {
+	background-color: #ab3c16;
+}
+.calcite-maps .dark-red-50 {
+	background-color: rgba(171, 60, 22, 0.5);
+}
+.calcite-maps .dark-red-75 {
+	background-color: rgba(171, 60, 22, 0.75);
+}
+.calcite-maps .light-orange {
+	background-color: #f6ca92;
+}
+.calcite-maps .light-orange-50 {
+	background-color: rgba(246, 202, 146, 0.5);
+}
+.calcite-maps .light-orange-75 {
+	background-color: rgba(246, 202, 146, 0.75);
+}
+.calcite-maps .orange {
+	background-color: #eda959;
+}
+.calcite-maps .orange-50 {
+	background-color: rgba(237, 169, 89, 0.5);
+}
+.calcite-maps .orange-75 {
+	background-color: rgba(237, 169, 89, 0.75);
+}
+.calcite-maps .orange-dark {
+	background-color: #e8912e;
+}
+.calcite-maps .orange-dark-50 {
+	background-color: rgba(232, 145, 46, 0.5);
+}
+.calcite-maps .orange-dark-75 {
+	background-color: rgba(232, 145, 46, 0.75);
+}
+.calcite-maps .light-yellow {
+	background-color: #efe397;
+}
+.calcite-maps .light-yellow-50 {
+	background-color: rgba(239, 227, 151, 0.5);
+}
+.calcite-maps .light-yellow-75 {
+	background-color: rgba(239, 227, 151, 0.75);
+}
+.calcite-maps .yellow {
+	background-color: #e4d154;
+}
+.calcite-maps .yellow-50 {
+	background-color: rgba(228, 209, 84, 0.5);
+}
+.calcite-maps .yellow-75 {
+	background-color: rgba(228, 209, 84, 0.75);
+}
+.calcite-maps .yellow-dark {
+	background-color: #d9bf2b;
+}
+.calcite-maps .yellow-dark-50 {
+	background-color: rgba(217, 191, 43, 0.5);
+}
+.calcite-maps .yellow-dark-75 {
+	background-color: rgba(217, 191, 43, 0.75);
+}
+.calcite-maps .light-purple {
+	background-color: #c4bcdc;
+}
+.calcite-maps .light-purple-50 {
+	background-color: rgba(196, 188, 220, 0.5);
+}
+.calcite-maps .light-purple-75 {
+	background-color: rgba(196, 188, 220, 0.75);
+}
+.calcite-maps .purple {
+	background-color: #9081bc;
+}
+.calcite-maps .purple-50 {
+	background-color: rgba(144, 129, 188, 0.5);
+}
+.calcite-maps .purple-75 {
+	background-color: rgba(144, 129, 188, 0.75);
+}
+.calcite-maps .dark-purple {
+	background-color: #7461a8;
+}
+.calcite-maps .dark-purple-50 {
+	background-color: rgba(116, 97, 168, 0.5);
+}
+.calcite-maps .dark-purple-75 {
+	background-color: rgba(116, 97, 168, 0.75);
+}
+.calcite-maps .light-brown {
+	background-color: #d2b38f;
+}
+.calcite-maps .light-brown-50 {
+	background-color: rgba(210, 179, 143, 0.5);
+}
+.calcite-maps .light-brown-75 {
+	background-color: rgba(210, 179, 143, 0.75);
+}
+.calcite-maps .brown {
+	background-color: #a57946;
+}
+.calcite-maps .brown-50 {
+	background-color: rgba(165, 121, 70, 0.5);
+}
+.calcite-maps .brown-75 {
+	background-color: rgba(165, 121, 70, 0.75);
+}
+.calcite-maps .dark-brown {
+	background-color: #8c5e2a;
+}
+.calcite-maps .dark-brown-50 {
+	background-color: rgba(140, 94, 42, 0.5);
+}
+.calcite-maps .dark-brown-75 {
+	background-color: rgba(140, 94, 42, 0.75);
+}
+
+.calcite-maps .opacity-0 {
+	opacity: 0;
+}
+
+.calcite-maps .opacity-15 {
+	opacity: .15;
+}
+
+.calcite-maps .opacity-25 {
+	opacity: .25;
+}
+
+.calcite-maps .opacity-50 {
+	opacity: .5;
+}
+
+.calcite-maps .opacity-75 {
+	opacity: .75;
+}
+
+.calcite-maps .opacity-85 {
+	opacity: .85;
+}
+
+.calcite-maps .opacity-100 {
+	opacity: 1;
+}
+
+/* -------- */
+/* Defaults */
+/* -------- */
+
+/* Bootstrap navs */
+.calcite-maps .navbar-default .navbar-info {
+	color: #4c4c4c;
+}
+.calcite-maps .navbar-inverse .navbar-info {
+	color: #cfcfcf;
+}
+.calcite-maps .navbar-default .navbar-toggle .icon-bar {
+	/*background-color: #4c4c4c;*/
+}
+.calcite-maps .navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #cfcfcf;
+}
+/* Nav */
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+	background-color: transparent;
+}
+.navbar-inverse .navbar-nav > .open > a, 
+.navbar-inverse .navbar-nav > .open > a:hover, 
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+	background-color: transparent;
+}
+/* Top nav indicator */
+.calcite-maps .navbar-nav > li > a:hover, 
+.calcite-maps .navbar-nav > li > a:focus {
+	background-image: linear-gradient(to top, transparent 94%, #3b8fc4 94%, #3b8fc4 100%);
+}
+
+.calcite-maps .navbar-nav > li > .dropdown-toggle:hover,
+.calcite-maps .navbar-nav > li > .dropdown-toggle:focus {
+	/*background-image: none;*/
+}
+
+/* Dropdown */
+.calcite-maps .dropdown-menu .active > a,
+.calcite-maps .dropdown-menu li > .active > a {
+	color: #3f3f3f;
+	background-color: #F8F8F8;
+}
+.calcite-maps .dropdown-menu .active > a:hover, 
+.calcite-maps .dropdown-menu .active > a:focus,
+.calcite-maps .dropdown-menu li > .active > a:hover, 
+.calcite-maps .dropdown-menu li > .active > a:focus {
+	color: #3f3f3f;
+	background-color: #F8F8F8;
+}
+
+/* -------------------------------------------------- */
+/* Calcite navbar-light (Light background, Dark text) */
+/* black #323232 - text
+/* darkest-grey #595959 - hover
+/* off-white (#f8f8f8)
+/* ------------------------------------------------------------- */
+
+.calcite-maps .navbar-light .navbar-brand {
+	color: #323232;
+}
+.calcite-maps .navbar-light .navbar-info {
+	color: #323232;
+} 
+.calcite-maps .navbar-light .navbar-brand:hover,
+.calcite-maps .navbar-light .navbar-brand:focus {
+	color: #595959;
+}
+.calcite-maps .navbar-light .navbar-info:hover, 
+.calcite-maps .navbar-light .navbar-info:focus {
+	color: #595959;
+}
+.calcite-maps .navbar-light .navbar-nav > li > a,
+.calcite-maps .navbar-light .navbar-collapse.collapse.in .dropdown-menu > li > a {
+	color: #323232;
+}
+.calcite-maps .navbar-light .navbar-nav > li > a:hover,
+.calcite-maps .navbar-light .navbar-nav > li > a:focus
+{
+	color: #595959;
+	/*background-color: rgba(255,255,255,.1);*/
+	background-color: transparent;
+}
+.calcite-maps .navbar-light .navbar-nav > .active > a,
+.calcite-maps .navbar-light .navbar-nav > .active > a:hover,
+.calcite-maps .navbar-light .navbar-nav > .active > a:focus, 
+.calcite-maps .navbar-light .navbar-nav > .open > a,
+.calcite-maps .navbar-light .navbar-nav > .open > a:hover,
+.calcite-maps .navbar-light .navbar-nav > .open > a:focus  {
+	color: #323232;
+	/*background-color: rgba(255,255,255,.2);*/
+	background-color: transparent;
+}
+.calcite-maps .navbar-light .navbar-nav > .disabled > a,
+.calcite-maps .navbar-light .navbar-nav > .disabled > a:hover,
+.calcite-maps .navbar-light .navbar-nav > .disabled > a:focus {
+	color: #efefef;	
+	background-color: transparent;
+}
+.calcite-maps .navbar-light .navbar-collapse.collapse.in .dropdown-menu > li > a:hover, 
+.calcite-maps .navbar-light .navbar-collapse.collapse.in .dropdown-menu > li > a:focus {
+	color: #595959;
+	/*background-color: rgba(255,255,255,.2);*/
+	background-color: transparent;
+}
+.calcite-maps .navbar-light .navbar-nav > li > a:hover, 
+.calcite-maps .navbar-light .navbar-nav > li > a:focus {
+	background-image: linear-gradient(to top, transparent 94%, #323232 94%, #323232 100%);
+	transition: color 150ms linear, text-decoration 150ms linear;
+}
+.calcite-maps .navbar-light .navbar-toggle,
+.calcite-maps .navbar-light .navbar-toggle:hover {
+	border-color: #4c4c4c;
+}
+.calcite-maps .navbar-light .navbar-toggle:hover {
+	background-color: #4c4c4c;
+}
+.calcite-maps .navbar-light .navbar-toggle .icon-bar {
+	background-color: #323232;
+}
+.calcite-maps .navbar-light .navbar-toggle:hover .icon-bar {
+	background-color: #efefef;
+}
+
+/* ------------------------------------------------------------- */
+/* Calcite navbar-dark (Dark background, Light text)
+/* off-white (#f8f8f8)
+/* lightest-grey (#efefef)
+/* black (#323232) 
+/* ------------------------------------------------------------- */
+
+.calcite-maps .navbar-dark .navbar-brand {
+	color: #f8f8f8;
+}
+.calcite-maps .navbar-dark .navbar-info {
+	color: #f8f8f8;
+} 
+.calcite-maps .navbar-dark .navbar-brand:hover,
+.calcite-maps .navbar-dark .navbar-brand:focus {
+	color: #cccccc;
+}
+.calcite-maps .navbar-dark .navbar-info:hover, 
+.calcite-maps .navbar-dark .navbar-info:focus {
+	color: #cccccc;
+}
+.calcite-maps .navbar-dark .navbar-nav > li > a,
+.calcite-maps .navbar-dark .navbar-collapse.collapse.in .dropdown-menu > li > a {
+	color: #f8f8f8;
+}
+.calcite-maps .navbar-dark .navbar-nav > li > a:hover,
+.calcite-maps .navbar-dark .navbar-nav > li > a:focus {
+	color: #cccccc;
+	/*background-color: rgba(0,0,0,.1);*/
+	background-color: transparent;
+}
+.calcite-maps .navbar-dark .navbar-nav > .active > a,
+.calcite-maps .navbar-dark .navbar-nav > .active > a:hover,
+.calcite-maps .navbar-dark .navbar-nav > .active > a:focus, 
+.calcite-maps .navbar-dark .navbar-nav > .open > a,
+.calcite-maps .navbar-dark .navbar-nav > .open > a:hover,
+.calcite-maps .navbar-dark .navbar-nav > .open > a:focus  {
+	color: #f8f8f8;
+	/*background-color: rgba(0,0,0,.2);*/
+	background-color: transparent;
+}
+.calcite-maps .navbar-dark .navbar-nav > .disabled > a,
+.calcite-maps .navbar-dark .navbar-nav > .disabled > a:hover,
+.calcite-maps .navbar-dark .navbar-nav > .disabled > a:focus {
+	color: #efefef;	
+	background-color: transparent;
+}
+.calcite-maps .navbar-dark .navbar-collapse.collapse.in .dropdown-menu > li > a:hover, 
+.calcite-maps .navbar-dark .navbar-collapse.collapse.in .dropdown-menu > li > a:focus {
+	color: #cccccc;
+	/*background-color: rgba(0,0,0,.2);*/
+	background-color: transparent;
+}
+.calcite-maps .navbar-dark .navbar-nav > li > a:hover, 
+.calcite-maps .navbar-dark .navbar-nav > li > a:focus {
+	background-image: linear-gradient(to top, transparent 94%, #f8f8f8 94%, #f8f8f8 100%);
+	transition: color 150ms linear, text-decoration 150ms linear;
+}
+.calcite-maps .navbar-dark .navbar-toggle,
+.calcite-maps .navbar-dark .navbar-toggle:hover {
+	border-color: #efefef;
+}
+.calcite-maps .navbar-dark .navbar-toggle:hover {
+	background-color: #f8f8f8;
+}
+.calcite-maps .navbar-dark .navbar-toggle .icon-bar {
+	background-color: #f8f8f8;
+}
+.calcite-maps .navbar-dark .navbar-toggle:hover .icon-bar {
+	background-color: #323232;
+}
+
+/* -------- */
+/* Tooltips */
+/* -------- */
+
+/* Optional */
+
+.calcite-maps .tooltip {
+	min-width: 75px;
+}
+/*.calcite-maps .tooltip-inner {
+  white-space: nowrap;
+  background-color: rgb(56, 142, 196);
+  opacity: 1.0;
+}
+.calcite-maps .tooltip.in {
+  opacity: 1.0 !important;
+  filter: alpha(opacity=100);
+}
+.calcite-maps .tooltip.bottom .tooltip-arrow {
+  border-bottom-color: rgb(56, 142, 196);
+}
+.calcite-maps .tooltip.right .tooltip-arrow {
+  border-right-color: rgb(56, 142, 196);
+}*/
+/* ArcGIS 4.0 calcite-maps-esrileaflet.css */
+/* Overrides for UI controls to support responsive layouts */ 
+/* ======================================================================== */
+
+/* ------------ */
+/* Zoom Control */
+/* ------------ */
+
+.calcite-maps .leaflet-control-zoom.leaflet-bar > a {
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 0;
+}
+
+/* Container */
+
+.calcite-maps .leaflet-top,
+.calcite-maps .leaflet-bottom {
+	z-index: 0;
+}
+
+/* Zoom Container */
+
+.calcite-maps.zoom-top-left .leaflet-top {
+	top: 0;
+	bottom: auto;
+}
+.calcite-maps.zoom-top-left .leaflet-left {
+	right: auto;
+	left: 0;
+}
+
+.calcite-maps.zoom-top-right .leaflet-left,
+.calcite-maps.zoom-bottom-right .leaflet-left {
+	right: 0;
+	left: auto;
+}
+
+.calcite-maps.zoom-bottom-left .leaflet-top,
+.calcite-maps.zoom-bottom-right .leaflet-top {
+	top: auto;
+	bottom: 0;
+}
+
+.calcite-maps.zoom-bottom-left .leaflet-left {
+	left: 0;
+	right: auto;
+}
+
+/* All */
+
+.calcite-maps .leaflet-control-zoom {
+	margin: 15px;
+}
+
+/* Top nav */
+
+.calcite-maps.nav-position-top .leaflet-control-zoom  {
+	margin-top: 80px;
+}
+
+.calcite-maps.nav-position-top-fixed .leaflet-control-zoom {
+	margin-top: 15px;
+}
+
+.calcite-maps.nav-position-top.nav-space-top .leaflet-control-zoom {
+	margin-top: 95px;
+} 
+
+.calcite-maps.nav-position-top.nav-space-all .leaflet-control-zoom {
+	margin-top: 95px;
+}
+
+.calcite-maps.nav-position-top.zoom-top-left.is-minibar .leaflet-control-zoom {
+	margin-top: 80px;
+}
+
+.calcite-maps.nav-position-top.zoom-top-right.is-minibar .leaflet-control-zoom {
+	margin-top: 15px;
+}
+
+.calcite-maps.nav-position-top.zoom-top-left.nav-space-top.is-minibar .leaflet-control-zoom,
+.calcite-maps.nav-position-top.zoom-top-left.nav-space-all.is-minibar .leaflet-control-zoom {
+	margin-top: 95px;
+}
+
+/* Bottom nav */
+
+.calcite-maps.nav-position-bottom .leaflet-control-zoom  {
+	margin-bottom: 80px;
+}
+
+.calcite-maps.nav-position-bottom-fixed .leaflet-control-zoom {
+	margin-bottom: 15px;
+}
+
+.calcite-maps.nav-position-bottom.nav-space-bottom .leaflet-control-zoom {
+	margin-bottom: 95px;
+} 
+
+.calcite-maps.nav-position-bottom.nav-space-all .leaflet-control-zoom {
+	margin-bottom: 95px;
+}
+
+.calcite-maps.nav-position-bottom.zoom-top-left.is-minibar .leaflet-control-zoom {
+	margin-bottom: 80px;
+}
+
+.calcite-maps.nav-position-bottom.zoom-top-right.is-minibar .leaflet-control-zoom {
+	margin-bottom: 15px;
+}
+
+.calcite-maps.nav-position-top.zoom-bottom-left.nav-space-bottom.is-minibar .leaflet-control-zoom,
+.calcite-maps.nav-position-top.zoom-bottom-left.nav-space-all.is-minibar .leaflet-control-zoom {
+	margin-bottom: 95px;
+}
+
+/* ------------------- */
+/* Attribution Control */
+/* ------------------- */
+
+/* Attribution */
+
+.calcite-maps .esri-leaflet-logo {
+	float: right;
+}
+
+.calcite-maps .esri-leaflet-logo > a > img {
+	max-width: 43px !important;
+}
+
+.calcite-maps .leaflet-control-attribution {
+	position: absolute;
+	white-space: nowrap; 
+	line-height: 14px;
+}
+
+.calcite-maps.nav-position-top .leaflet-bottom,
+.calcite-maps.nav-position-top-fixed .leaflet-bottom,
+.calcite-maps.nav-position-none .leaflet-bottom {
+	margin-bottom: 1px;
+}
+
+.calcite-maps.nav-position-bottom .leaflet-bottom,
+.calcite-maps.nav-position-bottom-fixed .leaflet-bottom {
+	top: 0;
+	bottom: auto;
+}
+
+.calcite-maps .leaflet-control-attribution,
+.calcite-maps .leaflet-control-attribution {
+	right: 45px;  
+	margin-top: 8px;
+}
+
+/* -------------- */
+/* Search Control */
+/* -------------- */
+
+.calcite-maps .geocoder-control-expanded, 
+.calcite-maps .leaflet-touch .geocoder-control-expanded {
+	min-width: 275px;
+	width: 100%;
+}
+
+.calcite-maps .geocoder-control-input.leaflet-bar {
+	padding: 7px;
+	box-shadow: none;
+	border-radius: 0;
+	border: 1px #959595 solid;
+}
+
+.calcite-maps .geocode-panel .geocoder-control-input.leaflet-bar {
+	padding: 9px;
+}
+
+.calcite-maps .navbar .geocode-navbar {
+	margin-top: 0;
+}
+
+.calcite-maps .panel .geocode-panel {
+	margin-top: 0;
+}
+
+.calcite-maps .panel .geocode-panel .geocoder-control {
+	margin: 4px 0 6px;
+}
+
+.calcite-maps .geocoder-control-suggestions {
+	box-shadow: none;
+	border-radius: 0;
+	border: 1px solid #ccc;
+}
+
+.calcite-maps.nav-position-bottom .geocoder-control-suggestions.leaflet-bar,
+.calcite-maps.nav-position-bottom-fixed .geocoder-control-suggestions.leaflet-bar {
+	top: auto;
+	bottom: 101%;
+}
+
+/* ------------- */
+/* Popup Control */
+/* ------------- */
+
+.calcite-maps .leaflet-popup-content-wrapper {
+	border-radius: 0;
+}
+
+.calcite-maps .leaflet-popup-content {
+	min-width: 100px;
+}
+
+/* -------------- */
+/* Small screens */
+/* -------------- */
+
+@media(max-width: 767px) {
+	/* ------------ */
+	/* Zoom Control */
+	/* ------------ */
+
+
+	/* All */
+
+	.calcite-maps .leaflet-control-zoom {
+		margin: 25px;
+	}
+
+	/* Top nav */
+
+	.calcite-maps.nav-position-top .leaflet-control-zoom {
+		margin-top: 85px;
+	}
+
+	.calcite-maps.nav-position-top-fixed .leaflet-control-zoom {
+		margin-top: 25px;
+	}
+
+	.calcite-maps.nav-position-top.nav-space-top .leaflet-control-zoom {
+		margin-top: 100px;
+	} 
+
+	.calcite-maps.nav-position-top.nav-space-all .leaflet-control-zoom {
+		margin-top: 100px;
+	}
+
+	.calcite-maps.nav-position-top.zoom-top-left.is-minibar .leaflet-control-zoom {
+		margin-top: 85px;
+	}
+
+	.calcite-maps.nav-position-top.zoom-top-right.is-minibar .leaflet-control-zoom {
+		margin-top: 25px;
+	}
+
+	.calcite-maps.nav-position-top.zoom-top-left.nav-space-top.is-minibar .leaflet-control-zoom,
+	.calcite-maps.nav-position-top.zoom-top-left.nav-space-all.is-minibar .leaflet-control-zoom {
+		margin-top: 100px;
+	}
+
+	/* Bottom nav */
+
+	.calcite-maps.nav-position-bottom .leaflet-control-zoom  {
+		margin-bottom: 85px;
+	}
+
+	.calcite-maps.nav-position-bottom-fixed .leaflet-control-zoom {
+		margin-bottom: 25px;
+	}
+
+	.calcite-maps.nav-position-bottom.nav-space-bottom .leaflet-control-zoom {
+		margin-bottom: 100px;
+	} 
+
+	.calcite-maps.nav-position-bottom.nav-space-all .leaflet-control-zoom {
+		margin-bottom: 100px;
+	}
+
+	.calcite-maps.nav-position-bottom.zoom-top-left.is-minibar .leaflet-control-zoom {
+		margin-bottom: 85px;
+	}
+
+	.calcite-maps.nav-position-bottom.zoom-top-right.is-minibar .leaflet-control-zoom {
+		margin-bottom: 25px;
+	}
+
+	.calcite-maps.nav-position-top.zoom-bottom-left.nav-space-bottom.is-minibar .leaflet-control-zoom,
+	.calcite-maps.nav-position-top.zoom-bottom-left.nav-space-all.is-minibar .leaflet-control-zoom {
+		margin-bottom: 100px;
+	}
+}
+/* Theme: Inline Zoom  */
+/* ------------------- */
+
+.calcite-maps.theme-inline-left .navbar,
+.calcite-maps.theme-inline-combo .navbar {
+	left: 47px;
+}
+
+.calcite-maps.theme-inline-right .navbar {
+	right: 47px;
+}
+
+.calcite-maps.nav-position-top.is-minibar.nav-space-all .navbar > .container-fluid .navbar-brand {
+	margin-left: -15px; 
+}
+
+.calcite-maps.theme-inline-left.nav-position-top.nav-space-all.is-minibar .navbar > .container-fluid .navbar-brand,
+.calcite-maps.theme-inline-right.nav-position-top.nav-space-all.is-minibar .navbar > .container-fluid .navbar-brand,
+.calcite-maps.theme-inline-combo.nav-position-top.nav-space-all.is-minibar .navbar > .container-fluid .navbar-brand, {
+	margin-left: -15px; 
+}
+
+/* ArcGIS */
+
+.calcite-maps.theme-inline-left.nav-position-top.nav-space-all .esriZoom.esriVertical.esriComponent,
+.calcite-maps.theme-inline-left.nav-position-bottom.nav-space-all .esriZoom.esriVertical.esriComponent,
+.calcite-maps.theme-inline-right.nav-position-top.nav-space-all .esriZoom.esriVertical.esriComponent,
+.calcite-maps.theme-inline-right.nav-position-bottom.nav-space-all .esriZoom.esriVertical.esriComponent,
+.calcite-maps.theme-inline-combo.nav-position-top.nav-space-all .esriZoom.esriVertical.esriComponent,
+.calcite-maps.theme-inline-combo.nav-position-bottom.nav-space-all .esriZoom.esriVertical.esriComponent {
+	margin: 15px;  
+}
+
+.calcite-maps.theme-inline-left.nav-position-top.zoom-top-left.nav-space-all.is-minibar .esriZoom.esriVertical.esriComponent,
+.calcite-maps.theme-inline-right.nav-position-top.zoom-top-left.nav-space-all.is-minibar .esriZoom.esriVertical.esriComponent,
+.calcite-maps.theme-inline-combo.nav-position-top.zoom-top-left.nav-space-all.is-minibar .esriZoom.esriVertical.esriComponent {
+	margin-top: 15px;
+}
+
+/* Esri-Leaflet */
+
+.calcite-maps.theme-inline-left.nav-position-top.nav-space-all .leaflet-control-zoom,
+.calcite-maps.theme-inline-left.nav-position-bottom.nav-space-all .leaflet-control-zoom,
+.calcite-maps.theme-inline-right.nav-position-top.nav-space-all .leaflet-control-zoom,
+.calcite-maps.theme-inline-right.nav-position-bottom.nav-space-all .leaflet-control-zoom,
+.calcite-maps.theme-inline-combo.nav-position-top.nav-space-all .leaflet-control-zoom,
+.calcite-maps.theme-inline-combo.nav-position-bottom.nav-space-all .leaflet-control-zoom {
+	margin: 15px;  
+}
+
+.calcite-maps.theme-inline-left.nav-position-top.zoom-top-left.nav-space-all.is-minibar .leaflet-control-zoom,
+.calcite-maps.theme-inline-right.nav-position-top.zoom-top-left.nav-space-all.is-minibar .leaflet-control-zoom,
+.calcite-maps.theme-inline-combo.nav-position-top.zoom-top-left.nav-space-all.is-minibar .leaflet-control-zoom {
+	margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+	.calcite-maps.theme-inline-left .navbar,
+	.calcite-maps.theme-inline-right .navbar {
+		top: auto;
+		bottom: 0;
+	}
+
+	.calcite-maps.theme-inline-combo .navbar {
+		top: auto;
+		right: 47px;
+		bottom: 0;
+		left: 0;
+	}
+
+	.calcite-maps.theme-inline-left.nav-position-top.nav-space-top .panel-container,
+	.calcite-maps.theme-inline-right.nav-position-top.nav-space-top .panel-container,
+	.calcite-maps.theme-inline-combo.nav-position-top.nav-space-top .panel-container {
+		top: 0;
+	}
+
+	.calcite-maps.theme-inline-left.nav-position-top.nav-space-all .panel-container,
+	.calcite-maps.theme-inline-left.nav-position-top.nav-space-all.is-minibar.panel-left .panel-container,
+	.calcite-maps.theme-inline-right.nav-position-top.nav-space-all .panel-container,
+	.calcite-maps.theme-inline-right.nav-position-top.nav-space-all.is-minibar.panel-left .panel-container,
+	.calcite-maps.theme-inline-combo.nav-position-top.nav-space-all .panel-container,
+	.calcite-maps.theme-inline-combo.nav-position-top.nav-space-all.is-minibar.panel-left .panel-container  {
+		top: 15px;
+		right: 0;
+	}
+
+	.calcite-maps.theme-inline-left .panel-body-control .panel-body-close,
+	.calcite-maps.theme-inline-right .panel-body-control .panel-body-close,
+	.calcite-maps.theme-inline-combo .panel-body-control .panel-body-close {
+		margin: 13px -15px;
+	}
+	.calcite-maps.theme-inline-left .panel-body-control .panel-control,
+	.calcite-maps.theme-inline-right .panel-body-control .panel-control,
+	.calcite-maps.theme-inline-combo .panel-body-control .panel-control {
+		margin: 0 15px 0 -15px;
+		padding: 0;
+	}
+
+	.calcite-maps.theme-inline-left.nav-position-top.is-minibar.nav-space-all .navbar > .container-fluid .navbar-brand,
+	.calcite-maps.theme-inline-right.nav-position-top.is-minibar.nav-space-all .navbar > .container-fluid .navbar-brand,
+	.calcite-maps.theme-inline-combo.nav-position-top.is-minibar.nav-space-all .navbar > .container-fluid .navbar-brand {
+		margin-left: 0;
+	}
+
+	/* ArcGIS */
+
+	.calcite-maps.theme-inline-left.zoom-top-left .esriCorner.esriTop.esriLeft {
+		top: auto;
+		right: auto;
+		bottom: 0;
+		left: 0;
+	}
+
+	.calcite-maps.theme-inline-right.zoom-top-right .esriCorner.esriTop.esriLeft,
+	.calcite-maps.theme-inline-combo.zoom-top-left .esriCorner.esriTop.esriLeft {
+		top: auto;
+		right: 0;
+		bottom: 0;
+		left: auto;
+	}
+
+	.calcite-maps.theme-inline-left.nav-position-top .esriCorner.esriBottom.esriRight,
+	.calcite-maps.theme-inline-right.nav-position-top .esriCorner.esriBottom.esriRight,
+	.calcite-maps.theme-inline-combo.nav-position-top .esriCorner.esriBottom.esriRight {
+		top: 0;
+		bottom: auto;
+	}
+
+	/* Esri-Leaflet */
+
+	.calcite-maps.theme-inline-left.zoom-top-left .leaflet-top,
+	.calcite-maps.theme-inline-right.zoom-top-right .leaflet-top,
+	.calcite-maps.theme-inline-combo.zoom-top-left .leaflet-top {
+		top: auto;
+		bottom: 0;
+	}
+
+	.calcite-maps.theme-inline-right.zoom-top-right .leaflet-left,
+	.calcite-maps.theme-inline-combo.zoom-top-left .leaflet-left {
+		right: 0;
+		left: auto;
+	}
+
+	.calcite-maps.theme-inline-left.nav-position-top .leaflet-bottom.leaflet-right,
+	.calcite-maps.theme-inline-right.nav-position-top .leaflet-bottom.leaflet-right,
+	.calcite-maps.theme-inline-combo.nav-position-top .leaflet-bottom.leaflet-right {
+		top: 0;
+		right: 0;
+		bottom: auto;
+		left: auto;
+	}
+}/* Theme: Jumbo Title */
+/* ------------------ */
+
+.calcite-maps.theme-jumbo-title {
+	/* No styles for small screens */
+}
+
+/* >Small screen sizes only */
+@media (min-width: 768px) {
+	/* Layout */
+	.calcite-maps.theme-jumbo-title.nav-position-top-fixed .map-position-absolute {
+		top: 120px;
+		bottom: 0;
+	}
+	.calcite-maps.theme-jumbo-title.nav-position-bottom-fixed .map-position-absolute {
+		top: 0;
+		bottom: 120px;
+	}
+	/* Navbar */
+	.calcite-maps.theme-jumbo-title .navbar {
+		min-height: 120px;
+		padding-top: 27px;
+	}
+	.calcite-maps.theme-jumbo-title .navbar-title {
+		margin-top: -19px;
+		padding-top: 0;
+		font-size: 60px;
+	}
+	.calcite-maps.theme-jumbo-title .navbar-subtitle {
+		padding-top: 4px;
+		padding-left: 4px;
+		font-size: 14px;
+	}
+
+	.calcite-maps.theme-jumbo-title .navbar-brand {
+		margin-top: -10px;
+		padding: 0px 0px 0px 0px;
+		font-size: 80px;
+	}
+
+	.calcite-maps.theme-jumbo-title .navbar-info {
+		left: 85px;
+		width: calc(100% - 555px);
+	}
+
+	/* Panel */
+	.calcite-maps.theme-jumbo-title.nav-position-top.nav-space-none .panel-container,
+	.calcite-maps.theme-jumbo-title.nav-position-top-fixed.nav-space-none .panel-container {
+		top: 136px;
+	}
+
+	/* ArcGIS  */
+	.calcite-maps.theme-jumbo-title.nav-position-top.zoom-top-left .esriZoom.esriVertical.esriComponent,
+	.calcite-maps.theme-jumbo-title.nav-position-top.zoom-top-right .esriZoom.esriVertical.esriComponent,
+	.calcite-maps.theme-jumbo-title.nav-position-bottom.zoom-bottom-left .esriZoom.esriVertical.esriComponent,
+	.calcite-maps.theme-jumbo-title.nav-position-bottom.zoom-bottom-right .esriZoom.esriVertical.esriComponent {
+		margin: 136px 25px;
+	}
+
+	.calcite-maps.theme-jumbo-title.nav-position-top .scene-directions {
+		top: 136px;
+	}
+
+	/* Esri-Leaflet */
+	.calcite-maps.theme-jumbo-title.nav-position-top .leaflet-control-zoom {
+		margin: 135px 25px 15px 15px;
+	}
+
+	.calcite-maps.theme-jumbo-title.nav-position-bottom .leaflet-control-zoom {
+		margin: 15px 25px 135px 15px;
+	}
+
+}/* Theme: Side Nav */
+/* --------------- */
+
+.calcite-maps.theme-side-left .navbar-brand {
+	padding: 12px 12px 12px 12px;
+}
+
+.calcite-maps.theme-side-left .navbar-info {
+	position: fixed;
+	/*top: 15px;*/
+	left: 66px;
+	right: 15px;
+	/*width: calc(100% - 158px);*/
+	width: 100%;
+	height: 64px;
+	padding-left: 15px;
+
+	background-color: white;
+}
+
+.calcite-maps.theme-side-left .navbar-fixed-top {
+	top: 0px;
+	bottom: 0;
+	width: 66px;
+	/*margin: 15px;*/
+}
+
+.calcite-maps.theme-side-left .navbar-fixed-top {
+	left: 0;
+	right: auto;
+}
+
+.calcite-maps.theme-side-left .navbar-collapse.collapse > .navbar-right {
+	margin-right: 0;
+}
+
+.calcite-maps.theme-side-left .navbar-collapse.collapse.in > .navbar-right {
+	margin-right: -15px;
+}
+
+.calcite-maps.theme-side-left #mainNav .nav > li > a {
+	padding: 15px 25px;
+	text-align: center;
+}
+
+.calcite-maps.theme-side-left #mainNav .nav > li > a:hover,
+.calcite-maps.theme-side-left #mainNav .nav > li > a:focus {
+	background-image: linear-gradient(to left, transparent 92%, #3b8fc4 92%, #3b8fc4 100%);
+	background-color: #f6f6f6;
+}
+
+/* Panel - Left */
+.calcite-maps.theme-side-left .panel-container {
+	top: 80px;
+	bottom: 15px;
+}
+
+@media (max-width: 767px) {
+
+	/* Reset */
+	.calcite-maps.theme-side-left .navbar-fixed-top {
+		left: 0;
+		bottom: auto;
+		right: 0;
+		width: 100%;
+	}
+
+	.calcite-maps.theme-side-left .navbar-info {
+		width: calc(100% - 130px);
+		background-color: transparent;
+	}
+	
+	.calcite-maps.theme-side-left #mainNav .nav > li > a {
+		padding: 12px 15px;
+		text-align: left;
+	}
+
+	.calcite-maps.theme-side-left #mainNav .nav > li > a:hover,
+	.calcite-maps.theme-side-left #mainNav .nav > li > a:focus {
+		background-image: none;
+		background-color: #f6f6f6;
+	}
+
+	.calcite-maps.theme-side-left .navbar-collapse {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.calcite-maps.theme-side-left .panel-container {
+		top: 64px;
+	}
+
+
+}

@@ -5,44 +5,36 @@ module.exports = function(grunt){
         concat: {
 			options: {
 			  separator: '',
+			  stripBanners: true			  
 			},
-			html: {
-				src: ['components/html/head.html', 'components/html/nav.html', 'components/html/map.html', 'components/html/panels.html', 'components/html/error-modals.html', 'components/html/footer.html'],
-				dest: 'components/html/combined/index.html'
-		  	},
-			css: {
-				src: ['components/css/general.css', 'components/css/modals.css', 'components/css/panels.css', 'components/css/nav.css', 'components/css/map-controls.css', 'components/css/map-popups.css', 'components/css/media-query.css' ],
-				dest: 'components/css/combined/style.css'
-			 },
-			js: {
-				src: ['components/js/functions.js', 'components/js/map-functions.js', 'components/js/date-picker.js', 'components/js/map.js',  'components/js/layers.js', 'components/js/filter.js', 'components/js/search.js', 'components/js/geolocate.js','components/js/loading-screen.js'],
-				dest: 'components/js/combined/app.js'
-			}
-		},
-        // minify production index.html file
-		htmlmin: {                                     
-			dist: {                                     
-			  options: {                                 
-				removeComments: true,
-				collapseWhitespace: true
+			esri_leaflet: {
+				src: ['plugins/esri/esri-leaflet/esri-leaflet.js', 'plugins/esri/esri-leaflet-renderers/esri-leaflet-renderers.js', 'plugins/esri/esri-leaflet-geocoder/esri-leaflet-geocoder.js'],
+				dest: 'bundled/js/esri.leaflet.plugins.js'
 			  },
-              // ouput dir : input dir    
-			  files: {                                   
-				'../build/[app-name]/index.html': 'components/html/combined/index.html'
-				}
-			}
+			leaflet_plugins: {
+				src: ['plugins/leaflet-zoomhome/leaflet.zoomhome.js', 'plugins/leaflet-fullscreen/Leaflet.fullscreen.js', 'plugins/leaflet-locate/L.Control.Locate.min.js'],
+				dest: 'bundled/js/leaflet.plugins.js'
+			},
+			css_general: {
+				src: ['plugins/leaflet-zoomhome/leaflet.zoomhome.css', 'plugins/leaflet-fullscreen/leaflet.fullscreen.css', 'plugins/leaflet-locate/L.Control.Locate.css', 'plugins/esri/esri-leaflet-geocoder/esri-leaflet-geocoder.css' ],
+				dest: 'bundled/css/leaflet-plugins.css'
+			 },
+			css_calcite: {
+				src: ['plugins/esri/calcite-maps/calcite-maps-layout.css', 'plugins/esri/calcite-maps/calcite-maps-style.css', 'plugins/esri/calcite-maps/calcite-maps-esrileaflet.css', 'plugins/esri/calcite-maps/theme-inline-zoom.css', 'plugins/esri/calcite-maps/theme-jumbo-title.css', 'plugins/esri/calcite-maps/theme-side-nav.css'],
+				dest: 'bundled/css/esri-calcite.css'
+			}			
 		},
         // minify production css file
 		cssmin: {
             options: {
-              sourceMap: true
+              sourceMap: false
           },   
 		  target: {
 			files: [{
 			  expand: true,
-			  cwd: 'components/css/combined',
+			  cwd: 'bundled/css',
 			  src: ['*.css'],
-			  dest: '../build/[app-name]/assets/css',
+			  dest: 'bundled/production/css/',
 			  ext: '.min.css'
 			}]
 		  }
@@ -51,47 +43,20 @@ module.exports = function(grunt){
 		uglify: {
 			options: {
 				mangle: false,
-				sourceMap: true,
-        		sourceMapName: '../build/[app-name]/assets/js/app.map'
+				sourceMap: false        		
 			},
 			my_target: {
 			  files: {
                 // ouput dir : input dir    
-				'../build/[app-name]/assets/js/app.min.js' : ['components/js/combined/app.js']
+				'bundled/production/js/leaflet.plugins.min.js' : ['bundled/js/leaflet.plugins.js'],
+				'bundled/production/js/esri.leaflet.plugins.min.js' : ['bundled/js/esri.leaflet.plugins.js']
 			  }
 			}
-  		},
-        // run tasks when files change
-		watch: {
-			html: {
-				files: 'components/html/*.html',
-				tasks: ['concat:html','htmlmin']
-			},
-			css: {
-				files: 'components/css/*.css',
-				tasks: ['concat:css','cssmin']
-			},
-			js: {
-				files: 'components/js/*.js',
-				tasks: ['concat:js','uglify']
-			}	
-		},
-        // spin up a local server to test changes
-		connect: {
-			server: {
-			  options: {
-				base: '../build/[app-name]'
-			  }
-			}
-  		}
+  		}        
 	});
+
     // load tasks
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-concat');	
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-uglify-es');
-    // register tasks
-	grunt.registerTask('default', ['connect','watch']);
+	grunt.loadNpmTasks('grunt-contrib-uglify-es');    
 };
