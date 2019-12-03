@@ -18,7 +18,7 @@
     "grunt": "^1.0.4",
     "grunt-babel": "^8.0.0",
     "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-connect": "^2.0.0",
+    "grunt-contrib-connect": "^2.1.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-csslint": "^2.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
@@ -27,15 +27,15 @@
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-uncss": "^0.8.6"
+    "grunt-uncss": "^0.9.0"
   },
   "dependencies": {
     "bootstrap": "^3.4.1",
-    "esri-leaflet": "^2.2.4",
-    "esri-leaflet-geocoder": "^2.2.14",
+    "esri-leaflet": "^2.3.2",
+    "esri-leaflet-geocoder": "^2.3.2",
     "esri-leaflet-legend": "^2.0.1",
     "esri-leaflet-renderers": "^2.0.6",
-    "jquery": "^3.4.0",
-    "leaflet": "^1.4.0"
+    "jquery": "^3.4.1",
+    "leaflet": "^1.6.0"
   }
 }
