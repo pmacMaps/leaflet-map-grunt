@@ -35,7 +35,7 @@
     "esri-leaflet-geocoder": "^2.3.2",
     "esri-leaflet-legend": "^2.0.1",
     "esri-leaflet-renderers": "^2.0.6",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "leaflet": "^1.6.0"
   }
 }
