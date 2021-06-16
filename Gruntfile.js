@@ -1,4 +1,4 @@
-module.exports = function(grunt){
+export default function(grunt) {
 	// configurations
     grunt.initConfig({
 		// combine files together
@@ -20,15 +20,15 @@ module.exports = function(grunt){
 			}
 		},
         // minify production index.html file
-		htmlmin: {                                     
-			dist: {                                     
-			  options: {                                 
+		htmlmin: {
+			dist: {
+			  options: {
 				removeComments: true,
 				collapseWhitespace: true
 			  },
-              // ouput dir : input dir    
-			  files: {                                   
-				'../build/[app-name]/index.html': 'components/html/combined/index.html'
+              // ouput dir : input dir
+			  files: {
+				'build/index.html' : 'components/html/combined/index.html'
 				}
 			}
 		},
@@ -36,13 +36,13 @@ module.exports = function(grunt){
 		cssmin: {
             options: {
               sourceMap: true
-          },   
+          },
 		  target: {
 			files: [{
 			  expand: true,
 			  cwd: 'components/css/combined',
 			  src: ['*.css'],
-			  dest: '../build/[app-name]/assets/css',
+			  dest: '/build/assets/css',
 			  ext: '.min.css'
 			}]
 		  }
@@ -52,12 +52,12 @@ module.exports = function(grunt){
 			options: {
 				mangle: false,
 				sourceMap: true,
-        		sourceMapName: '../build/[app-name]/assets/js/app.map'
+        		sourceMapName: '/build/assets/js/app.map'
 			},
 			my_target: {
 			  files: {
-                // ouput dir : input dir    
-				'../build/[app-name]/assets/js/app.min.js' : ['components/js/combined/app.js']
+                // ouput dir : input dir
+				'/build/assets/js/app.min.js' : ['components/js/combined/app.js']
 			  }
 			}
   		},
@@ -74,13 +74,13 @@ module.exports = function(grunt){
 			js: {
 				files: 'components/js/*.js',
 				tasks: ['concat:js','uglify']
-			}	
+			}
 		},
         // spin up a local server to test changes
 		connect: {
 			server: {
 			  options: {
-				base: '../build/[app-name]'
+				base: 'build'
 			  }
 			}
   		}
@@ -91,7 +91,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-uglify-es');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-babel');
     // register tasks
